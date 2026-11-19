@@ -8,7 +8,7 @@ Se-eon Kim, Minkyoung Kim · Kyung Hee University · Undergraduate Paper Track
 
 This study asks what must be checked before a representation intervention can be used to test whether information decoded from a model's internal representations is actually used by the model.
 
-In two Korean BERT offensive-language classifiers, gender was linearly decodable, but no intervention was valid: LEACE did not erase gender consistently across splits, and no AlterRep setting flipped gender while preserving non-target information. The study therefore stops at "use cannot yet be decided" rather than "not used"; judged on a single split, LEACE would have passed as a successful erasure.
+In two Korean BERT offensive-language classifiers, gender was linearly decodable, but no intervention was valid: LEACE did not erase gender consistently across splits, and no AlterRep setting flipped gender while preserving non-target information. The study therefore stops at "use cannot yet be decided" rather than "not used"; judged on a single split, LEACE could have passed as a successful erasure.
 
 ![Figure 1. Overview](figures/figure1_overview.png)
 
@@ -262,7 +262,7 @@ First-author paper, Korea Software Congress (KSC 2026)
 
 이 연구는 내부 표현에서 읽히는 정보가 모델 판단에 실제로 쓰이는지 표현 개입으로 검사할 때, 개입의 유효성을 무엇으로 확인해야 하는지를 다룬다.
 
-두 한국어 BERT 공격성 분류기에서 성별은 선형으로 판독되었지만 유효한 개입은 없었다. LEACE는 분할에 따라 소거 기준 충족 여부가 달랐고, AlterRep은 성별 전환과 비목표 보존을 함께 충족한 설정이 없었다. 그래서 결론은 '쓰지 않는다'가 아니라 '쓰는지 아직 판정할 수 없다'에서 멈추며, 분할 하나만 보았다면 LEACE는 소거에 성공한 것으로 판단되었을 것이다.
+두 한국어 BERT 공격성 분류기에서 성별은 선형으로 판독되었지만 유효한 개입은 없었다. LEACE는 분할에 따라 소거 기준 충족 여부가 달랐고, AlterRep은 성별 전환과 비목표 보존을 함께 충족한 설정이 없었다. 그래서 결론은 '쓰지 않는다'가 아니라 '쓰는지 아직 판정할 수 없다'에서 멈추며, 분할 하나만 보았다면 LEACE는 소거에 성공한 것으로 판단될 수 있었다.
 
 ![그림 1. 전체 실험 개요](figures/figure1_overview.png)
 
