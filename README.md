@@ -1,6 +1,8 @@
 # Gender Information in the Internal Representations of Korean BERT Offensive Language Classifiers: Decodability and Intervention Validity
 
-Seeon Kim, Minkyoung Kim · Kyung Hee University · Korea Software Congress (KSC 2026), Undergraduate Paper Track
+First-author paper, Korea Software Congress (KSC 2026)
+
+Seeon Kim, Minkyoung Kim · Kyung Hee University · Undergraduate Paper Track
 
 **English** | [한국어](#한국어)
 
