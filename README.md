@@ -252,8 +252,9 @@ figures/                    Figures 1-4
 
 ### 한국어 BERT 공격성 분류기의 내부 표현에서 성별 정보 판독과 개입 유효성 평가
 
+First-author paper, Korea Software Congress (KSC 2026)
 
-김세언, 김민경 · 경희대학교 · Korea Software Congress (KSC) 2026 학부생논문
+김세언, 김민경 · 경희대학교 · 학부생논문
 
 [English](#abstract) | **한국어**
 
