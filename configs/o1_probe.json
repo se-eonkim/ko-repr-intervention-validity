@@ -1,0 +1,6 @@
+{
+  "probe": "StandardScaler + LogisticRegression",
+  "C": 0.01,
+  "max_iter": 2000,
+  "metric": "macro_f1"
+}

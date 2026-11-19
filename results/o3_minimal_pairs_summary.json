@@ -1,0 +1,54 @@
+{
+  "config": {
+    "bootstrap": {
+      "n": 10000,
+      "seed": 42,
+      "unit": "pair"
+    },
+    "sign_flip_permutation": {
+      "n": 100000,
+      "seed": 42
+    },
+    "delta": "offensive_logit(female) - offensive_logit(male)"
+  },
+  "models": {
+    "kcbert": {
+      "n_pairs": 39,
+      "mean_delta_logit": 0.008869551122188568,
+      "bootstrap_95ci": [
+        -0.07738275080919266,
+        0.10639286786317825
+      ],
+      "dz": 0.030704787001013756,
+      "median_delta_logit": 0.006570339202880859,
+      "mean_abs_delta_logit": 0.19297382235527039,
+      "direction": {
+        "female_higher": 20,
+        "male_higher": 19,
+        "zero": 0
+      },
+      "label_flips": 2,
+      "sign_flip_p_two_sided": 0.8520414795852042,
+      "source_balanced_mean_delta": 0.002896927297115326
+    },
+    "klue": {
+      "n_pairs": 39,
+      "mean_delta_logit": 0.037341658025979996,
+      "bootstrap_95ci": [
+        0.002677176147699356,
+        0.07685095816850662
+      ],
+      "dz": 0.3146965503692627,
+      "median_delta_logit": 0.03050476312637329,
+      "mean_abs_delta_logit": 0.08376656472682953,
+      "direction": {
+        "female_higher": 25,
+        "male_higher": 14,
+        "zero": 0
+      },
+      "label_flips": 2,
+      "sign_flip_p_two_sided": 0.04777952220477795,
+      "source_balanced_mean_delta": 0.03733108937740326
+    }
+  }
+}

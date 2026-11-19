@@ -1,0 +1,4 @@
+,KcBERT,KLUE-BERT
+mean delta [95% CI],"+.009 [-.077, +.106]","+.037 [+.003, +.077]"
+effect size d_z,+.03,+.31
+delta>0 / delta<0,20 / 19,25 / 14

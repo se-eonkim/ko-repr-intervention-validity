@@ -1,0 +1,14 @@
+# KOLD and anything derived that contains comment text
+data/raw/
+data/processed/
+
+# model weights and extracted hidden states (regenerated locally)
+checkpoints/
+activations/
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+Thumbs.db

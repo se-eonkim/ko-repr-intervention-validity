@@ -1,0 +1,21 @@
+{
+  "layer": 12,
+  "inlp": {
+    "family": "LinearSVC(fit_intercept=False, class_weight=balanced)",
+    "C_grid": [0.001, 0.01, 0.1, 1.0],
+    "cv_seed": 20260929,
+    "max_m": 8
+  },
+  "candidates": {"m": [4, 8], "alpha": [0, 0.5, 1, 2, 4]},
+  "random_direction_seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "gender_probe": {"C": 0.01, "max_iter": 2000,
+                   "competence_min_bacc": 0.65, "permutation_n": 100, "permutation_seed": 20260929},
+  "offensive_probe": {"C": 1.0, "max_iter": 2000, "train_split_seed": "42"},
+  "gates": {
+    "completeness_min_target_prob": 0.70,
+    "completeness_natural_margin": 0.05,
+    "completeness_min_hard_rate": 0.70,
+    "survival_max_mean_drop": 0.05,
+    "survival_max_rate_drop": 0.05
+  }
+}

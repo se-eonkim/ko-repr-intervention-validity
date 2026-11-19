@@ -1,0 +1,484 @@
+{
+ "n_pairs": 39,
+ "edit_format": "[start, end, replacement] character offsets into the KOLD comment",
+ "pairs": [
+  {
+   "guid": "kold-v1_32291",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     12,
+     13,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_00995",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_35488",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     0,
+     1,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_31810",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_02339",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     0,
+     1,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_06501",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     0,
+     1,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_37306",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     0,
+     1,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_08989",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     0,
+     1,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_21312",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     17,
+     18,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_38189",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_28992",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     26,
+     27,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_24581",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     3,
+     4,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_13447",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     10,
+     11,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_01287",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     0,
+     1,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_15275",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     13,
+     14,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_09123",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     60,
+     61,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_24358",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_38773",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_36249",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_37436",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     0,
+     1,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_03521",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_28229",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     35,
+     36,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_21546",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     9,
+     10,
+     "남"
+    ],
+    [
+     26,
+     27,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_14126",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     0,
+     1,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_07070",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_38654",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     4,
+     5,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_19709",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     9,
+     10,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_07448",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     17,
+     18,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_22030",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_16679",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     2,
+     3,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_07480",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     9,
+     10,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_32474",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     4,
+     5,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_11447",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     4,
+     5,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_17942",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     0,
+     1,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_01882",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_37825",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     15,
+     16,
+     "남"
+    ],
+    [
+     35,
+     36,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_03974",
+   "source_group": "gender-male",
+   "counterpart_group": "gender-female",
+   "edits": [
+    [
+     16,
+     17,
+     "여"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_18665",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     4,
+     5,
+     "남"
+    ]
+   ]
+  },
+  {
+   "guid": "kold-v1_30817",
+   "source_group": "gender-female",
+   "counterpart_group": "gender-male",
+   "edits": [
+    [
+     0,
+     1,
+     "남"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "probe_splits": {
+    "seeds": [42, 43, 44, 45, 46],
+    "test_size": 0.2,
+    "offensive_n_per_class": 225,
+    "offensive_sample_seed": 42
+  },
+  "intervention_roles": {
+    "seed": 20260929,
+    "fractions": {
+      "independent_y_eval_probe": 0.4,
+      "selection_validation": 0.3,
+      "effect_audit": 0.3
+    }
+  },
+  "target_free_controls": {
+    "subtypes": ["untargeted", "individual", "other"],
+    "per_subtype": 250,
+    "seed": 42
+  }
+}

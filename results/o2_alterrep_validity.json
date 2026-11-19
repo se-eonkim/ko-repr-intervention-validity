@@ -1,0 +1,2016 @@
+{
+  "config": {
+    "layer": 12,
+    "inlp": {
+      "family": "LinearSVC(fit_intercept=False, class_weight=balanced)",
+      "C_grid": [
+        0.001,
+        0.01,
+        0.1,
+        1.0
+      ],
+      "cv_seed": 20260929,
+      "max_m": 8
+    },
+    "candidates": {
+      "m": [
+        4,
+        8
+      ],
+      "alpha": [
+        0,
+        0.5,
+        1,
+        2,
+        4
+      ]
+    },
+    "random_direction_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "gender_probe": {
+      "C": 0.01,
+      "max_iter": 2000,
+      "competence_min_bacc": 0.65,
+      "permutation_n": 100,
+      "permutation_seed": 20260929
+    },
+    "offensive_probe": {
+      "C": 1.0,
+      "max_iter": 2000,
+      "train_split_seed": "42"
+    },
+    "gates": {
+      "completeness_min_target_prob": 0.7,
+      "completeness_natural_margin": 0.05,
+      "completeness_min_hard_rate": 0.7,
+      "survival_max_mean_drop": 0.05,
+      "survival_max_rate_drop": 0.05
+    }
+  },
+  "packages": {
+    "numpy": "2.5.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.13.0",
+    "transformers": "5.14.1"
+  },
+  "results": {
+    "kcbert": {
+      "inlp": {
+        "selected_C": 0.001,
+        "C_cv": {
+          "0.001": 0.6708852436323367,
+          "0.01": 0.6220203488372094,
+          "0.1": 0.59250069213732,
+          "1.0": 0.5969649778516057
+        },
+        "iterations": [
+          {
+            "iteration": 1,
+            "cv_bacc": 0.6708852436323367
+          },
+          {
+            "iteration": 2,
+            "cv_bacc": 0.4539348006644518
+          },
+          {
+            "iteration": 3,
+            "cv_bacc": 0.3607592746400886
+          },
+          {
+            "iteration": 4,
+            "cv_bacc": 0.28886351052048725
+          },
+          {
+            "iteration": 5,
+            "cv_bacc": 0.2595099667774086
+          },
+          {
+            "iteration": 6,
+            "cv_bacc": 0.23149570874861575
+          },
+          {
+            "iteration": 7,
+            "cv_bacc": 0.2111641749723145
+          },
+          {
+            "iteration": 8,
+            "cv_bacc": 0.22671650055370987
+          }
+        ],
+        "ortho_gap": 4.440892098500626e-16
+      },
+      "gender_probe": {
+        "bacc": 0.8025974025974026,
+        "null_q95": 0.6142083333333332,
+        "competent": true
+      },
+      "removal_baselines": [
+        {
+          "m": 4,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.2861042320728302,
+            "natural_target_mean": 0.6885911226272583,
+            "threshold": 0.7,
+            "hard_target_rate": 0.12987012987012986,
+            "paired_increase": -0.01000653300434351
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.5604819059371948,
+            "natural_target_mean": 0.7038893103599548,
+            "threshold": 0.7,
+            "hard_target_rate": 0.5777777777777777,
+            "paired_increase": 0.24907301366329193
+          }
+        },
+        {
+          "m": 8,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.28494539856910706,
+            "natural_target_mean": 0.6885911226272583,
+            "threshold": 0.7,
+            "hard_target_rate": 0.11688311688311688,
+            "paired_increase": -0.011165380477905273
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.5747742056846619,
+            "natural_target_mean": 0.7038893103599548,
+            "threshold": 0.7,
+            "hard_target_rate": 0.6444444444444445,
+            "paired_increase": 0.26336532831192017
+          }
+        }
+      ],
+      "candidates": [
+        {
+          "m": 4,
+          "alpha": 0.5,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.37935033440589905,
+            "natural_target_mean": 0.6885911226272583,
+            "threshold": 0.7,
+            "hard_target_rate": 0.24675324675324675,
+            "paired_increase": 0.0832396000623703
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.7079352736473083,
+            "natural_target_mean": 0.7038893103599548,
+            "threshold": 0.7,
+            "hard_target_rate": 0.9111111111111111,
+            "paired_increase": 0.39652642607688904
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.021439075469970703,
+              "rate_drop": -0.01866666666666661
+            },
+            "1": {
+              "mean_drop": -0.0064154863357543945,
+              "rate_drop": -0.010666666666666602
+            }
+          },
+          "restricted_D_X": 0.018964290618896484,
+          "mean_edit_norm": 4.51426474736367,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.30023276805877686,
+              "male_to_female": 0.3166254758834839,
+              "D_X": 0.004865646827965975,
+              "mean_edit_norm": 1.40987868638944
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.2947353422641754,
+              "male_to_female": 0.3110545575618744,
+              "D_X": 0.0023705000057816505,
+              "mean_edit_norm": 1.5162478449280123
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.2949865460395813,
+              "male_to_female": 0.3086502254009247,
+              "D_X": 0.001569218933582306,
+              "mean_edit_norm": 1.3671661130760484
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.29232215881347656,
+              "male_to_female": 0.3077927231788635,
+              "D_X": 0.006133249495178461,
+              "mean_edit_norm": 1.368655752685811
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.3025553226470947,
+              "male_to_female": 0.31757959723472595,
+              "D_X": 0.0034338715486228466,
+              "mean_edit_norm": 1.3891550693767625
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.2994684875011444,
+              "male_to_female": 0.3160149157047272,
+              "D_X": 0.010648363269865513,
+              "mean_edit_norm": 1.546373366414575
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.2985313832759857,
+              "male_to_female": 0.3143640160560608,
+              "D_X": 0.004979281220585108,
+              "mean_edit_norm": 1.4651193228504786
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.2979753911495209,
+              "male_to_female": 0.3131994307041168,
+              "D_X": 0.0015851474599912763,
+              "mean_edit_norm": 1.6189644737489606
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.2953476309776306,
+              "male_to_female": 0.31469905376434326,
+              "D_X": 0.004582213703542948,
+              "mean_edit_norm": 1.3488601752452125
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.3024301826953888,
+              "male_to_female": 0.3151973783969879,
+              "D_X": 0.007265808060765266,
+              "mean_edit_norm": 1.4497743190092787
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": true,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 4,
+          "alpha": 1,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.48002228140830994,
+            "natural_target_mean": 0.6885911226272583,
+            "threshold": 0.7,
+            "hard_target_rate": 0.4155844155844156,
+            "paired_increase": 0.18391163647174835
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.8197581171989441,
+            "natural_target_mean": 0.7038893103599548,
+            "threshold": 0.7,
+            "hard_target_rate": 1.0,
+            "paired_increase": 0.5083493590354919
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.028903186321258545,
+              "rate_drop": -0.03066666666666662
+            },
+            "1": {
+              "mean_drop": 0.0009667277336120605,
+              "rate_drop": 0.0
+            }
+          },
+          "restricted_D_X": 0.025557909160852432,
+          "mean_edit_norm": 5.44897636439677,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.30440741777420044,
+              "male_to_female": 0.32092058658599854,
+              "D_X": 0.005384292919188738,
+              "mean_edit_norm": 1.711562730283654
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.29295259714126587,
+              "male_to_female": 0.3092667758464813,
+              "D_X": 0.0020772188436239958,
+              "mean_edit_norm": 1.7721143952156266
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.29451122879981995,
+              "male_to_female": 0.3083048164844513,
+              "D_X": 0.0019881902262568474,
+              "mean_edit_norm": 1.6789480570914066
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.28908127546310425,
+              "male_to_female": 0.3041885793209076,
+              "D_X": 0.007351844571530819,
+              "mean_edit_norm": 1.6669643748498644
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.30741211771965027,
+              "male_to_female": 0.3223470151424408,
+              "D_X": 0.003962966613471508,
+              "mean_edit_norm": 1.5636146860361502
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.30178967118263245,
+              "male_to_female": 0.3183481693267822,
+              "D_X": 0.015907004475593567,
+              "mean_edit_norm": 1.8894228010224499
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.3017235994338989,
+              "male_to_female": 0.3178735077381134,
+              "D_X": 0.005349355284124613,
+              "mean_edit_norm": 1.7153360301168972
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.2992636263370514,
+              "male_to_female": 0.314510703086853,
+              "D_X": 0.002433502348139882,
+              "mean_edit_norm": 2.004896592216421
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.2956441342830658,
+              "male_to_female": 0.31527379155158997,
+              "D_X": 0.0071698520332574844,
+              "mean_edit_norm": 1.6033924468072358
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.305500864982605,
+              "male_to_female": 0.31774604320526123,
+              "D_X": 0.010537480935454369,
+              "mean_edit_norm": 1.7758805035436653
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": true,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 4,
+          "alpha": 2,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.6595801115036011,
+            "natural_target_mean": 0.6885911226272583,
+            "threshold": 0.7,
+            "hard_target_rate": 0.7662337662337663,
+            "paired_increase": 0.36346930265426636
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.9329577088356018,
+            "natural_target_mean": 0.7038893103599548,
+            "threshold": 0.7,
+            "hard_target_rate": 1.0,
+            "paired_increase": 0.6215487718582153
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.043230414390563965,
+              "rate_drop": -0.04799999999999993
+            },
+            "1": {
+              "mean_drop": 0.015332221984863281,
+              "rate_drop": 0.016000000000000014
+            }
+          },
+          "restricted_D_X": 0.04447774961590767,
+          "mean_edit_norm": 9.02852949491535,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.3129033148288727,
+              "male_to_female": 0.32961416244506836,
+              "D_X": 0.00791958812624216,
+              "mean_edit_norm": 2.81975737277888
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.28943580389022827,
+              "male_to_female": 0.3057299554347992,
+              "D_X": 0.002477615838870406,
+              "mean_edit_norm": 3.0324956898560247
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.293601393699646,
+              "male_to_female": 0.3076392114162445,
+              "D_X": 0.0037544588558375835,
+              "mean_edit_norm": 2.734332226152097
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.282683402299881,
+              "male_to_female": 0.2970241904258728,
+              "D_X": 0.011256566271185875,
+              "mean_edit_norm": 2.737311505371622
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.3173145651817322,
+              "male_to_female": 0.331939160823822,
+              "D_X": 0.007178919855505228,
+              "mean_edit_norm": 2.778310138753525
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.3064905107021332,
+              "male_to_female": 0.32306674122810364,
+              "D_X": 0.0291125625371933,
+              "mean_edit_norm": 3.09274673282915
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.3082384467124939,
+              "male_to_female": 0.3249456584453583,
+              "D_X": 0.008930595591664314,
+              "mean_edit_norm": 2.9302386457009577
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.3018544316291809,
+              "male_to_female": 0.3171378970146179,
+              "D_X": 0.004390536807477474,
+              "mean_edit_norm": 3.237928947497921
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.2962568700313568,
+              "male_to_female": 0.3164290487766266,
+              "D_X": 0.014863801188766956,
+              "mean_edit_norm": 2.697720350490425
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.3117140531539917,
+              "male_to_female": 0.32287710905075073,
+              "D_X": 0.01917381025850773,
+              "mean_edit_norm": 2.8995486380185573
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": true,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 4,
+          "alpha": 4,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.8470862507820129,
+            "natural_target_mean": 0.6885911226272583,
+            "threshold": 0.7,
+            "hard_target_rate": 0.8961038961038961,
+            "paired_increase": 0.5509753823280334
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.9852632880210876,
+            "natural_target_mean": 0.7038893103599548,
+            "threshold": 0.7,
+            "hard_target_rate": 1.0,
+            "paired_increase": 0.6738544702529907
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.06868976354598999,
+              "rate_drop": -0.07199999999999995
+            },
+            "1": {
+              "mean_drop": 0.042710304260253906,
+              "rate_drop": 0.046666666666666634
+            }
+          },
+          "restricted_D_X": 0.09498109668493271,
+          "mean_edit_norm": 16.33197272886906,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.33046483993530273,
+              "male_to_female": 0.34739378094673157,
+              "D_X": 0.014312023296952248,
+              "mean_edit_norm": 5.270457141399013
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.28259870409965515,
+              "male_to_female": 0.2988164722919464,
+              "D_X": 0.004221098963171244,
+              "mean_edit_norm": 5.737681394052067
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.29194462299346924,
+              "male_to_female": 0.3064112067222595,
+              "D_X": 0.007411516271531582,
+              "mean_edit_norm": 5.059054756354297
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.27023234963417053,
+              "male_to_female": 0.2829056978225708,
+              "D_X": 0.020609870553016663,
+              "mean_edit_norm": 5.113596923042326
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.33780282735824585,
+              "male_to_female": 0.35124605894088745,
+              "D_X": 0.014132375828921795,
+              "mean_edit_norm": 5.455061555095945
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.31612351536750793,
+              "male_to_female": 0.33270782232284546,
+              "D_X": 0.055426403880119324,
+              "mean_edit_norm": 5.741402320360832
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.3217794597148895,
+              "male_to_female": 0.3392811417579651,
+              "D_X": 0.017844215035438538,
+              "mean_edit_norm": 5.702308987969226
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.30709201097488403,
+              "male_to_female": 0.3224067986011505,
+              "D_X": 0.00829746201634407,
+              "mean_edit_norm": 5.9692860634931435
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.2975609600543976,
+              "male_to_female": 0.3187626600265503,
+              "D_X": 0.03117235004901886,
+              "mean_edit_norm": 5.107955855428904
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.32439208030700684,
+              "male_to_female": 0.33324384689331055,
+              "D_X": 0.035537414252758026,
+              "mean_edit_norm": 5.423509890802331
+            }
+          ],
+          "gates": {
+            "C": true,
+            "S": true,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 8,
+          "alpha": 0.5,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.3804267942905426,
+            "natural_target_mean": 0.6885911226272583,
+            "threshold": 0.7,
+            "hard_target_rate": 0.24675324675324675,
+            "paired_increase": 0.08431608229875565
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.7239297032356262,
+            "natural_target_mean": 0.7038893103599548,
+            "threshold": 0.7,
+            "hard_target_rate": 0.9333333333333333,
+            "paired_increase": 0.4125208258628845
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.18699103593826294,
+              "rate_drop": -0.18666666666666665
+            },
+            "1": {
+              "mean_drop": -0.07433962821960449,
+              "rate_drop": -0.08933333333333326
+            }
+          },
+          "restricted_D_X": 0.11638382822275162,
+          "mean_edit_norm": 8.919584418131006,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.2976367175579071,
+              "male_to_female": 0.3159877359867096,
+              "D_X": 0.0054830219596624374,
+              "mean_edit_norm": 2.005898623041611
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.2938302457332611,
+              "male_to_female": 0.30949974060058594,
+              "D_X": 0.003986536059528589,
+              "mean_edit_norm": 2.184239145348274
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.2998305857181549,
+              "male_to_female": 0.31368422508239746,
+              "D_X": 0.00863164197653532,
+              "mean_edit_norm": 2.2084499447747756
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.29927927255630493,
+              "male_to_female": 0.31976109743118286,
+              "D_X": 0.011393875814974308,
+              "mean_edit_norm": 2.2296431463203192
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.31055688858032227,
+              "male_to_female": 0.3292742073535919,
+              "D_X": 0.00939320120960474,
+              "mean_edit_norm": 2.5857024589942883
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.29457446932792664,
+              "male_to_female": 0.3094278573989868,
+              "D_X": 0.008556592278182507,
+              "mean_edit_norm": 2.063796353142166
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.30097806453704834,
+              "male_to_female": 0.3174131214618683,
+              "D_X": 0.013952039182186127,
+              "mean_edit_norm": 1.977347928501835
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.29578015208244324,
+              "male_to_female": 0.30791378021240234,
+              "D_X": 0.00603809580206871,
+              "mean_edit_norm": 2.0570036276355927
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.29241999983787537,
+              "male_to_female": 0.31220337748527527,
+              "D_X": 0.006150760687887669,
+              "mean_edit_norm": 2.3085181954055183
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.30005404353141785,
+              "male_to_female": 0.32026755809783936,
+              "D_X": 0.006733268965035677,
+              "mean_edit_norm": 2.0223698135047723
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": true,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 8,
+          "alpha": 1,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.48342153429985046,
+            "natural_target_mean": 0.6885911226272583,
+            "threshold": 0.7,
+            "hard_target_rate": 0.4155844155844156,
+            "paired_increase": 0.18731087446212769
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.8328213095664978,
+            "natural_target_mean": 0.7038893103599548,
+            "threshold": 0.7,
+            "hard_target_rate": 1.0,
+            "paired_increase": 0.5214125514030457
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.19570308923721313,
+              "rate_drop": -0.18666666666666665
+            },
+            "1": {
+              "mean_drop": 0.004456222057342529,
+              "rate_drop": 0.0013333333333332975
+            }
+          },
+          "restricted_D_X": 0.17798009514808655,
+          "mean_edit_norm": 10.608660475189923,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.3000331521034241,
+              "male_to_female": 0.3184070587158203,
+              "D_X": 0.006453169044107199,
+              "mean_edit_norm": 2.4953407596922133
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.29378560185432434,
+              "male_to_female": 0.308660626411438,
+              "D_X": 0.004522614646703005,
+              "mean_edit_norm": 2.717660556505281
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.30040889978408813,
+              "male_to_female": 0.3143329918384552,
+              "D_X": 0.009213912300765514,
+              "mean_edit_norm": 2.7454074132453443
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.30095335841178894,
+              "male_to_female": 0.3227892220020294,
+              "D_X": 0.015206173993647099,
+              "mean_edit_norm": 2.7143863545257165
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.3243613541126251,
+              "male_to_female": 0.3440609276294708,
+              "D_X": 0.011019265279173851,
+              "mean_edit_norm": 3.2356288927964165
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.2919143736362457,
+              "male_to_female": 0.3067619204521179,
+              "D_X": 0.009717399254441261,
+              "mean_edit_norm": 2.479558432026409
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.30435118079185486,
+              "male_to_female": 0.3193589746952057,
+              "D_X": 0.021693313494324684,
+              "mean_edit_norm": 2.472607003218401
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.29232481122016907,
+              "male_to_female": 0.3053417503833771,
+              "D_X": 0.007020337041467428,
+              "mean_edit_norm": 2.5270570477390026
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.2912355959415436,
+              "male_to_female": 0.31105586886405945,
+              "D_X": 0.0064210304990410805,
+              "mean_edit_norm": 2.8354026445280716
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.30689164996147156,
+              "male_to_female": 0.32717785239219666,
+              "D_X": 0.005818638484925032,
+              "mean_edit_norm": 2.414337693173823
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": true,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 8,
+          "alpha": 2,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.6635223627090454,
+            "natural_target_mean": 0.6885911226272583,
+            "threshold": 0.7,
+            "hard_target_rate": 0.7662337662337663,
+            "paired_increase": 0.36741161346435547
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.9383612871170044,
+            "natural_target_mean": 0.7038893103599548,
+            "threshold": 0.7,
+            "hard_target_rate": 1.0,
+            "paired_increase": 0.6269524693489075
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.19935846328735352,
+              "rate_drop": -0.18666666666666665
+            },
+            "1": {
+              "mean_drop": 0.12320250272750854,
+              "rate_drop": 0.11599999999999999
+            }
+          },
+          "restricted_D_X": 0.32967230677604675,
+          "mean_edit_norm": 17.83916883576288,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.3049202561378479,
+              "male_to_female": 0.3232554495334625,
+              "D_X": 0.009635853581130505,
+              "mean_edit_norm": 4.011797246083221
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.29375460743904114,
+              "male_to_female": 0.3070542514324188,
+              "D_X": 0.007465919945389032,
+              "mean_edit_norm": 4.368478290696548
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.30164840817451477,
+              "male_to_female": 0.3156994581222534,
+              "D_X": 0.012829342857003212,
+              "mean_edit_norm": 4.416899889549551
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.30438587069511414,
+              "male_to_female": 0.32887086272239685,
+              "D_X": 0.02677176520228386,
+              "mean_edit_norm": 4.4592862926406385
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.35280948877334595,
+              "male_to_female": 0.3742000162601471,
+              "D_X": 0.017821388319134712,
+              "mean_edit_norm": 5.171404917988577
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.28668859601020813,
+              "male_to_female": 0.3014600872993469,
+              "D_X": 0.02302166260778904,
+              "mean_edit_norm": 4.127592706284332
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.3112218379974365,
+              "male_to_female": 0.3232593834400177,
+              "D_X": 0.039024468511343,
+              "mean_edit_norm": 3.95469585700367
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.2855282425880432,
+              "male_to_female": 0.3002282977104187,
+              "D_X": 0.012230055406689644,
+              "mean_edit_norm": 4.1140072552711855
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.2889387309551239,
+              "male_to_female": 0.3087758421897888,
+              "D_X": 0.0076862117275595665,
+              "mean_edit_norm": 4.617036390811037
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.32092559337615967,
+              "male_to_female": 0.3411509096622467,
+              "D_X": 0.006125697400420904,
+              "mean_edit_norm": 4.044739627009545
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": false,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 8,
+          "alpha": 4,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.8433595299720764,
+            "natural_target_mean": 0.6885911226272583,
+            "threshold": 0.7,
+            "hard_target_rate": 0.8961038961038961,
+            "paired_increase": 0.5472487211227417
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.9855244159698486,
+            "natural_target_mean": 0.7038893103599548,
+            "threshold": 0.7,
+            "hard_target_rate": 1.0,
+            "paired_increase": 0.6741155982017517
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.2006571888923645,
+              "rate_drop": -0.18666666666666665
+            },
+            "1": {
+              "mean_drop": 0.32263532280921936,
+              "rate_drop": 0.30133333333333334
+            }
+          },
+          "restricted_D_X": 0.4379373788833618,
+          "mean_edit_norm": 32.88462663111743,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.31507325172424316,
+              "male_to_female": 0.332967072725296,
+              "D_X": 0.01683991774916649,
+              "mean_edit_norm": 7.505566872610766
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.29392117261886597,
+              "male_to_female": 0.3041493594646454,
+              "D_X": 0.014753036201000214,
+              "mean_edit_norm": 8.101540232725137
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.30444079637527466,
+              "male_to_female": 0.31870323419570923,
+              "D_X": 0.024816012009978294,
+              "mean_edit_norm": 8.236740728789787
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.31156787276268005,
+              "male_to_female": 0.3411061763763428,
+              "D_X": 0.053175441920757294,
+              "mean_edit_norm": 8.560498417794731
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.4121352732181549,
+              "male_to_female": 0.43570640683174133,
+              "D_X": 0.03741222992539406,
+              "mean_edit_norm": 9.516459654995865
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.2766156494617462,
+              "male_to_female": 0.2909809648990631,
+              "D_X": 0.05208449065685272,
+              "mean_edit_norm": 7.9721785840021395
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.3254295587539673,
+              "male_to_female": 0.3310731053352356,
+              "D_X": 0.07477056980133057,
+              "mean_edit_norm": 7.351240481400703
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.27240321040153503,
+              "male_to_female": 0.29016417264938354,
+              "D_X": 0.02481037937104702,
+              "mean_edit_norm": 7.825372143074819
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.28464481234550476,
+              "male_to_female": 0.30427536368370056,
+              "D_X": 0.01215340569615364,
+              "mean_edit_norm": 8.785573265523354
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.350196897983551,
+              "male_to_female": 0.36953845620155334,
+              "D_X": 0.011656653136014938,
+              "mean_edit_norm": 7.80945844149922
+            }
+          ],
+          "gates": {
+            "C": true,
+            "S": false,
+            "R": false
+          },
+          "valid": false
+        }
+      ],
+      "n_valid": 0
+    },
+    "klue": {
+      "inlp": {
+        "selected_C": 0.001,
+        "C_cv": {
+          "0.001": 0.6884828349944629,
+          "0.01": 0.6603578349944629,
+          "0.1": 0.5943037098560355,
+          "1.0": 0.5838316722037653
+        },
+        "iterations": [
+          {
+            "iteration": 1,
+            "cv_bacc": 0.6884828349944629
+          },
+          {
+            "iteration": 2,
+            "cv_bacc": 0.5634620708748616
+          },
+          {
+            "iteration": 3,
+            "cv_bacc": 0.49543535437430786
+          },
+          {
+            "iteration": 4,
+            "cv_bacc": 0.4948920265780731
+          },
+          {
+            "iteration": 5,
+            "cv_bacc": 0.4584163898117387
+          },
+          {
+            "iteration": 6,
+            "cv_bacc": 0.43228128460686605
+          },
+          {
+            "iteration": 7,
+            "cv_bacc": 0.3935146733111849
+          },
+          {
+            "iteration": 8,
+            "cv_bacc": 0.3757509689922481
+          }
+        ],
+        "ortho_gap": 2.220446049250313e-16
+      },
+      "gender_probe": {
+        "bacc": 0.7256854256854257,
+        "null_q95": 0.6283055555555556,
+        "competent": true
+      },
+      "removal_baselines": [
+        {
+          "m": 4,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.23698720335960388,
+            "natural_target_mean": 0.6548258662223816,
+            "threshold": 0.7,
+            "hard_target_rate": 0.11688311688311688,
+            "paired_increase": -0.044172048568725586
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.6458258032798767,
+            "natural_target_mean": 0.7188407778739929,
+            "threshold": 0.7,
+            "hard_target_rate": 0.7555555555555555,
+            "paired_increase": 0.3006516396999359
+          }
+        },
+        {
+          "m": 8,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.22822895646095276,
+            "natural_target_mean": 0.6548258662223816,
+            "threshold": 0.7,
+            "hard_target_rate": 0.1038961038961039,
+            "paired_increase": -0.052930306643247604
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.6334182024002075,
+            "natural_target_mean": 0.7188407778739929,
+            "threshold": 0.7,
+            "hard_target_rate": 0.7777777777777778,
+            "paired_increase": 0.28824397921562195
+          }
+        }
+      ],
+      "candidates": [
+        {
+          "m": 4,
+          "alpha": 0.5,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.34567171335220337,
+            "natural_target_mean": 0.6548258662223816,
+            "threshold": 0.7,
+            "hard_target_rate": 0.24675324675324675,
+            "paired_increase": 0.0645124688744545
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.7839921712875366,
+            "natural_target_mean": 0.7188407778739929,
+            "threshold": 0.7,
+            "hard_target_rate": 0.8888888888888888,
+            "paired_increase": 0.4388180077075958
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.08587032556533813,
+              "rate_drop": -0.1333333333333333
+            },
+            "1": {
+              "mean_drop": -0.011199653148651123,
+              "rate_drop": -0.04399999999999993
+            }
+          },
+          "restricted_D_X": 0.07680443674325943,
+          "mean_edit_norm": 5.325866069167287,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.2772589325904846,
+              "male_to_female": 0.34151598811149597,
+              "D_X": 0.012785041704773903,
+              "mean_edit_norm": 0.8013636915397389
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.27937614917755127,
+              "male_to_female": 0.339558869600296,
+              "D_X": 0.003701014444231987,
+              "mean_edit_norm": 0.8979113310820032
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.2813434600830078,
+              "male_to_female": 0.3466356694698334,
+              "D_X": 0.004161396529525518,
+              "mean_edit_norm": 0.9269231623391306
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.27874940633773804,
+              "male_to_female": 0.3457914888858795,
+              "D_X": 0.009421057067811489,
+              "mean_edit_norm": 1.019758030673339
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.2798251807689667,
+              "male_to_female": 0.3421986997127533,
+              "D_X": 0.008892806246876717,
+              "mean_edit_norm": 0.8623381499987333
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.28346240520477295,
+              "male_to_female": 0.3483978509902954,
+              "D_X": 0.005310238804668188,
+              "mean_edit_norm": 1.0692849374357027
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.2771008014678955,
+              "male_to_female": 0.34459826350212097,
+              "D_X": 0.013595378026366234,
+              "mean_edit_norm": 0.9189691342094924
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.28422895073890686,
+              "male_to_female": 0.3621109426021576,
+              "D_X": 0.007918525487184525,
+              "mean_edit_norm": 1.2597838358668685
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.2861567437648773,
+              "male_to_female": 0.34762847423553467,
+              "D_X": 0.007404624484479427,
+              "mean_edit_norm": 0.816008818956071
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.28165918588638306,
+              "male_to_female": 0.34467124938964844,
+              "D_X": 0.01992133818566799,
+              "mean_edit_norm": 0.9268481237638174
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": true,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 4,
+          "alpha": 1,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.46841901540756226,
+            "natural_target_mean": 0.6548258662223816,
+            "threshold": 0.7,
+            "hard_target_rate": 0.4675324675324675,
+            "paired_increase": 0.1872597485780716
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.8668915033340454,
+            "natural_target_mean": 0.7188407778739929,
+            "threshold": 0.7,
+            "hard_target_rate": 0.9111111111111111,
+            "paired_increase": 0.5217174291610718
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.11790090799331665,
+              "rate_drop": -0.15866666666666662
+            },
+            "1": {
+              "mean_drop": 0.02942347526550293,
+              "rate_drop": 0.0013333333333334085
+            }
+          },
+          "restricted_D_X": 0.10973022133111954,
+          "mean_edit_norm": 6.251728767185075,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.2736718952655792,
+              "male_to_female": 0.33803993463516235,
+              "D_X": 0.01461003627628088,
+              "mean_edit_norm": 0.9220901623277028
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.27618667483329773,
+              "male_to_female": 0.33607402443885803,
+              "D_X": 0.0038276216946542263,
+              "mean_edit_norm": 1.0829895530775135
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.2810075879096985,
+              "male_to_female": 0.34592241048812866,
+              "D_X": 0.005035039037466049,
+              "mean_edit_norm": 1.1184679623080402
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.2770993113517761,
+              "male_to_female": 0.3440253734588623,
+              "D_X": 0.010648072697222233,
+              "mean_edit_norm": 1.252293911769761
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.27824437618255615,
+              "male_to_female": 0.3402872681617737,
+              "D_X": 0.011902718804776669,
+              "mean_edit_norm": 1.029283474940044
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.28554102778434753,
+              "male_to_female": 0.3522445261478424,
+              "D_X": 0.0071512977592647076,
+              "mean_edit_norm": 1.2562759020163086
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.27399682998657227,
+              "male_to_female": 0.34032729268074036,
+              "D_X": 0.011945557780563831,
+              "mean_edit_norm": 1.0158277351929106
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.2901791036128998,
+              "male_to_female": 0.3698906898498535,
+              "D_X": 0.009326739236712456,
+              "mean_edit_norm": 1.5791535811606583
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.28974223136901855,
+              "male_to_female": 0.35119789838790894,
+              "D_X": 0.007669576443731785,
+              "mean_edit_norm": 0.9463653004489183
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.2818443775177002,
+              "male_to_female": 0.3447095453739166,
+              "D_X": 0.023925993591547012,
+              "mean_edit_norm": 1.1355845916783174
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": true,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 4,
+          "alpha": 2,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.6531012058258057,
+            "natural_target_mean": 0.6548258662223816,
+            "threshold": 0.7,
+            "hard_target_rate": 0.7012987012987013,
+            "paired_increase": 0.37194201350212097
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.939993143081665,
+            "natural_target_mean": 0.7188407778739929,
+            "threshold": 0.7,
+            "hard_target_rate": 0.9777777777777777,
+            "paired_increase": 0.5948190093040466
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.16447603702545166,
+              "rate_drop": -0.18399999999999994
+            },
+            "1": {
+              "mean_drop": 0.11667829751968384,
+              "rate_drop": 0.08266666666666667
+            }
+          },
+          "restricted_D_X": 0.21748539805412292,
+          "mean_edit_norm": 10.651732138923343,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.2666153907775879,
+              "male_to_female": 0.3311588168144226,
+              "D_X": 0.020443759858608246,
+              "mean_edit_norm": 1.6027273830794777
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.26985785365104675,
+              "male_to_female": 0.32917025685310364,
+              "D_X": 0.004744984675198793,
+              "mean_edit_norm": 1.7958226621640063
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.2803901433944702,
+              "male_to_female": 0.34453731775283813,
+              "D_X": 0.007422963157296181,
+              "mean_edit_norm": 1.8538463246782613
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.27381187677383423,
+              "male_to_female": 0.3405098021030426,
+              "D_X": 0.014549307525157928,
+              "mean_edit_norm": 2.039516061346678
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.2751045525074005,
+              "male_to_female": 0.3364836275577545,
+              "D_X": 0.020256036892533302,
+              "mean_edit_norm": 1.7246762999974665
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.2897283136844635,
+              "male_to_female": 0.3600299060344696,
+              "D_X": 0.014373344369232655,
+              "mean_edit_norm": 2.1385698748714055
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.2678390145301819,
+              "male_to_female": 0.33196139335632324,
+              "D_X": 0.014496652409434319,
+              "mean_edit_norm": 1.8379382684189849
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.3021233379840851,
+              "male_to_female": 0.3859175443649292,
+              "D_X": 0.013221336528658867,
+              "mean_edit_norm": 2.519567671733737
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.29696232080459595,
+              "male_to_female": 0.35844239592552185,
+              "D_X": 0.012077742256224155,
+              "mean_edit_norm": 1.632017637912142
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.2822157144546509,
+              "male_to_female": 0.3447883427143097,
+              "D_X": 0.0341094434261322,
+              "mean_edit_norm": 1.8536962475276348
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": false,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 4,
+          "alpha": 4,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.8295379877090454,
+            "natural_target_mean": 0.6548258662223816,
+            "threshold": 0.7,
+            "hard_target_rate": 0.8961038961038961,
+            "paired_increase": 0.5483787655830383
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.9867470860481262,
+            "natural_target_mean": 0.7188407778739929,
+            "threshold": 0.7,
+            "hard_target_rate": 1.0,
+            "paired_increase": 0.6415729522705078
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.2064070701599121,
+              "rate_drop": -0.19466666666666665
+            },
+            "1": {
+              "mean_drop": 0.2871091961860657,
+              "rate_drop": 0.3266666666666667
+            }
+          },
+          "restricted_D_X": 0.37633275985717773,
+          "mean_edit_norm": 19.591874636568637,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.25297027826309204,
+              "male_to_female": 0.3176920711994171,
+              "D_X": 0.03294344246387482,
+              "mean_edit_norm": 3.156031574177546
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.2574193775653839,
+              "male_to_female": 0.31563636660575867,
+              "D_X": 0.008166349492967129,
+              "mean_edit_norm": 3.3865162381259184
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.27937808632850647,
+              "male_to_female": 0.34193557500839233,
+              "D_X": 0.012614686973392963,
+              "mean_edit_norm": 3.451515914109619
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.2672908902168274,
+              "male_to_female": 0.33354565501213074,
+              "D_X": 0.024971533566713333,
+              "mean_edit_norm": 3.786149170196412
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.2689180374145508,
+              "male_to_female": 0.32895559072494507,
+              "D_X": 0.038871075958013535,
+              "mean_edit_norm": 3.2251849969344284
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.29821494221687317,
+              "male_to_female": 0.3759748637676239,
+              "D_X": 0.029628897085785866,
+              "mean_edit_norm": 4.142042094859703
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.25573834776878357,
+              "male_to_female": 0.3159323036670685,
+              "D_X": 0.028117360547184944,
+              "mean_edit_norm": 3.7271956186045814
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.3261103630065918,
+              "male_to_female": 0.41979509592056274,
+              "D_X": 0.021708494052290916,
+              "mean_edit_norm": 4.582459416540399
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.3115580677986145,
+              "male_to_female": 0.37335333228111267,
+              "D_X": 0.021969033405184746,
+              "mean_edit_norm": 3.1901435410180565
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.28296226263046265,
+              "male_to_female": 0.34495478868484497,
+              "D_X": 0.05425582826137543,
+              "mean_edit_norm": 3.4080751781821363
+            }
+          ],
+          "gates": {
+            "C": true,
+            "S": false,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 8,
+          "alpha": 0.5,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.3209741413593292,
+            "natural_target_mean": 0.6548258662223816,
+            "threshold": 0.7,
+            "hard_target_rate": 0.19480519480519481,
+            "paired_increase": 0.039814919233322144
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.765974760055542,
+            "natural_target_mean": 0.7188407778739929,
+            "threshold": 0.7,
+            "hard_target_rate": 0.8888888888888888,
+            "paired_increase": 0.42080074548721313
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.1577555537223816,
+              "rate_drop": -0.19466666666666665
+            },
+            "1": {
+              "mean_drop": 0.07572734355926514,
+              "rate_drop": -0.07599999999999996
+            }
+          },
+          "restricted_D_X": 0.18726465106010437,
+          "mean_edit_norm": 8.72654490636622,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.2801670730113983,
+              "male_to_female": 0.342639684677124,
+              "D_X": 0.0068496642634272575,
+              "mean_edit_norm": 1.3799876526257753
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.2820923626422882,
+              "male_to_female": 0.3479402959346771,
+              "D_X": 0.00952661782503128,
+              "mean_edit_norm": 1.249275652024916
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.2809331715106964,
+              "male_to_female": 0.34585267305374146,
+              "D_X": 0.008264092728495598,
+              "mean_edit_norm": 1.289032100890617
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.28061097860336304,
+              "male_to_female": 0.34793370962142944,
+              "D_X": 0.01270638220012188,
+              "mean_edit_norm": 1.5398883266012309
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.2855294942855835,
+              "male_to_female": 0.35260459780693054,
+              "D_X": 0.010966836474835873,
+              "mean_edit_norm": 1.6916395526875516
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.2808534801006317,
+              "male_to_female": 0.34552621841430664,
+              "D_X": 0.009249687194824219,
+              "mean_edit_norm": 1.4277519448990963
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.2831948399543762,
+              "male_to_female": 0.34904608130455017,
+              "D_X": 0.016160709783434868,
+              "mean_edit_norm": 1.5126073405224327
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.2936069965362549,
+              "male_to_female": 0.3406444489955902,
+              "D_X": 0.007975275628268719,
+              "mean_edit_norm": 1.5954885436717738
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.28584757447242737,
+              "male_to_female": 0.34689396619796753,
+              "D_X": 0.01453226525336504,
+              "mean_edit_norm": 1.509762879258571
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.2721652090549469,
+              "male_to_female": 0.3472726345062256,
+              "D_X": 0.011846967972815037,
+              "mean_edit_norm": 1.5384320363991026
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": false,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 8,
+          "alpha": 1,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.42814263701438904,
+            "natural_target_mean": 0.6548258662223816,
+            "threshold": 0.7,
+            "hard_target_rate": 0.4025974025974026,
+            "paired_increase": 0.14698344469070435
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.8502970337867737,
+            "natural_target_mean": 0.7188407778739929,
+            "threshold": 0.7,
+            "hard_target_rate": 0.9111111111111111,
+            "paired_increase": 0.5051228404045105
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.20042628049850464,
+              "rate_drop": -0.19599999999999995
+            },
+            "1": {
+              "mean_drop": 0.2170531153678894,
+              "rate_drop": 0.21066666666666667
+            }
+          },
+          "restricted_D_X": 0.2588973641395569,
+          "mean_edit_norm": 10.33719252487704,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.279055118560791,
+              "male_to_female": 0.3413786292076111,
+              "D_X": 0.008165720850229263,
+              "mean_edit_norm": 1.7152141556758393
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.2836317718029022,
+              "male_to_female": 0.3497573435306549,
+              "D_X": 0.009411057457327843,
+              "mean_edit_norm": 1.5340474156304966
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.2811567187309265,
+              "male_to_female": 0.3463883101940155,
+              "D_X": 0.010066701099276543,
+              "mean_edit_norm": 1.4944748130475032
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.28032854199409485,
+              "male_to_female": 0.34727782011032104,
+              "D_X": 0.014090744778513908,
+              "mean_edit_norm": 1.9280688970454471
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.29074105620384216,
+              "male_to_female": 0.35816484689712524,
+              "D_X": 0.01251341961324215,
+              "mean_edit_norm": 2.1327902222264585
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.2804661691188812,
+              "male_to_female": 0.34504973888397217,
+              "D_X": 0.009904852136969566,
+              "mean_edit_norm": 1.7796897007380152
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.2846629023551941,
+              "male_to_female": 0.3512713611125946,
+              "D_X": 0.02313108928501606,
+              "mean_edit_norm": 1.9134115496549458
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.3005248010158539,
+              "male_to_female": 0.3485020399093628,
+              "D_X": 0.010805180296301842,
+              "mean_edit_norm": 2.014290627171669
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.28933092951774597,
+              "male_to_female": 0.3519008457660675,
+              "D_X": 0.015613214112818241,
+              "mean_edit_norm": 1.8571538690471296
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.2657598853111267,
+              "male_to_female": 0.3382907807826996,
+              "D_X": 0.018906759098172188,
+              "mean_edit_norm": 1.852519901240511
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": false,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 8,
+          "alpha": 2,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.5963969230651855,
+            "natural_target_mean": 0.6548258662223816,
+            "threshold": 0.7,
+            "hard_target_rate": 0.5974025974025974,
+            "paired_increase": 0.31523773074150085
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.9247322082519531,
+            "natural_target_mean": 0.7188407778739929,
+            "threshold": 0.7,
+            "hard_target_rate": 0.9555555555555556,
+            "paired_increase": 0.5795580744743347
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.23100459575653076,
+              "rate_drop": -0.19599999999999995
+            },
+            "1": {
+              "mean_drop": 0.40966877341270447,
+              "rate_drop": 0.528
+            }
+          },
+          "restricted_D_X": 0.381466269493103,
+          "mean_edit_norm": 17.453089812006116,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.27684319019317627,
+              "male_to_female": 0.3388812243938446,
+              "D_X": 0.014643685892224312,
+              "mean_edit_norm": 2.7599753052515505
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.28673726320266724,
+              "male_to_female": 0.35339364409446716,
+              "D_X": 0.010158626362681389,
+              "mean_edit_norm": 2.498551304049832
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.28161630034446716,
+              "male_to_female": 0.3474685549736023,
+              "D_X": 0.024768458679318428,
+              "mean_edit_norm": 2.578064201781234
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.2797817885875702,
+              "male_to_female": 0.3459976315498352,
+              "D_X": 0.017894776538014412,
+              "mean_edit_norm": 3.0797766532024617
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.30126336216926575,
+              "male_to_female": 0.36949169635772705,
+              "D_X": 0.01799621805548668,
+              "mean_edit_norm": 3.383279105375103
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.2797020673751831,
+              "male_to_female": 0.3441074788570404,
+              "D_X": 0.013402973301708698,
+              "mean_edit_norm": 2.8555038897981926
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.28762170672416687,
+              "male_to_female": 0.35573917627334595,
+              "D_X": 0.038019344210624695,
+              "mean_edit_norm": 3.0252146810448655
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.31455427408218384,
+              "male_to_female": 0.3644580543041229,
+              "D_X": 0.017276115715503693,
+              "mean_edit_norm": 3.1909770873435477
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.2963072657585144,
+              "male_to_female": 0.3621290326118469,
+              "D_X": 0.02004259079694748,
+              "mean_edit_norm": 3.019525758517142
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.2530773878097534,
+              "male_to_female": 0.32097896933555603,
+              "D_X": 0.035835735499858856,
+              "mean_edit_norm": 3.076864072798205
+            }
+          ],
+          "gates": {
+            "C": false,
+            "S": false,
+            "R": false
+          },
+          "valid": false
+        },
+        {
+          "m": 8,
+          "alpha": 4,
+          "female_to_male": {
+            "n": 77,
+            "mean_target_prob": 0.7632924318313599,
+            "natural_target_mean": 0.6548258662223816,
+            "threshold": 0.7,
+            "hard_target_rate": 0.7662337662337663,
+            "paired_increase": 0.4821332097053528
+          },
+          "male_to_female": {
+            "n": 45,
+            "mean_target_prob": 0.9684546589851379,
+            "natural_target_mean": 0.7188407778739929,
+            "threshold": 0.7,
+            "hard_target_rate": 0.9777777777777777,
+            "paired_increase": 0.6232804656028748
+          },
+          "survival": {
+            "-1": {
+              "mean_drop": -0.24548757076263428,
+              "rate_drop": -0.19599999999999995
+            },
+            "1": {
+              "mean_drop": 0.5812693238258362,
+              "rate_drop": 0.744
+            }
+          },
+          "restricted_D_X": 0.45327070355415344,
+          "mean_edit_norm": 32.11701117229457,
+          "random": [
+            {
+              "seed": 0,
+              "female_to_male": 0.2724718153476715,
+              "male_to_female": 0.3339851498603821,
+              "D_X": 0.03206226974725723,
+              "mean_edit_norm": 5.172460865038824
+            },
+            {
+              "seed": 1,
+              "female_to_male": 0.29305294156074524,
+              "male_to_female": 0.36067089438438416,
+              "D_X": 0.01869373954832554,
+              "mean_edit_norm": 4.686360589593562
+            },
+            {
+              "seed": 2,
+              "female_to_male": 0.2825852632522583,
+              "male_to_female": 0.3496650159358978,
+              "D_X": 0.05494732782244682,
+              "mean_edit_norm": 5.137773877264507
+            },
+            {
+              "seed": 3,
+              "female_to_male": 0.27876368165016174,
+              "male_to_female": 0.34356555342674255,
+              "D_X": 0.02903490699827671,
+              "mean_edit_norm": 5.722771423934142
+            },
+            {
+              "seed": 4,
+              "female_to_male": 0.32263875007629395,
+              "male_to_female": 0.3929145932197571,
+              "D_X": 0.03149307519197464,
+              "mean_edit_norm": 6.179341963573473
+            },
+            {
+              "seed": 5,
+              "female_to_male": 0.27821430563926697,
+              "male_to_female": 0.3422667682170868,
+              "D_X": 0.024151798337697983,
+              "mean_edit_norm": 5.338881663733693
+            },
+            {
+              "seed": 6,
+              "female_to_male": 0.2936287820339203,
+              "male_to_female": 0.3647477328777313,
+              "D_X": 0.06936485320329666,
+              "mean_edit_norm": 5.522683051190488
+            },
+            {
+              "seed": 7,
+              "female_to_male": 0.34315964579582214,
+              "male_to_female": 0.3972571790218353,
+              "D_X": 0.031172417104244232,
+              "mean_edit_norm": 5.832474522360122
+            },
+            {
+              "seed": 8,
+              "female_to_male": 0.3102671205997467,
+              "male_to_female": 0.3833942711353302,
+              "D_X": 0.032307110726833344,
+              "mean_edit_norm": 5.725480379667185
+            },
+            {
+              "seed": 9,
+              "female_to_male": 0.22835679352283478,
+              "male_to_female": 0.2889157235622406,
+              "D_X": 0.07267775386571884,
+              "mean_edit_norm": 5.941925727345556
+            }
+          ],
+          "gates": {
+            "C": true,
+            "S": false,
+            "R": false
+          },
+          "valid": false
+        }
+      ],
+      "n_valid": 0
+    }
+  }
+}

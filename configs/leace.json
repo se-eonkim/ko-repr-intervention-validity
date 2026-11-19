@@ -1,0 +1,18 @@
+{
+  "layer": 12,
+  "outer_seeds": [42, 43, 44, 45, 46],
+  "audit_fraction": 0.3,
+  "eraser": {
+    "method": "leace",
+    "affine": true,
+    "constrain_cov_trace": true,
+    "shrinkage": true,
+    "svd_tol": 0.01
+  },
+  "probe": {"C": 0.01, "max_iter": 2000},
+  "cv": {"n_splits": 5, "n_repeats": 10, "seed_offset": 10000},
+  "permutation": {"n": 100, "n_splits": 5, "quantile": 0.95,
+                  "seed_offset": 20000, "model_offset": {"kcbert": 0, "klue": 1000},
+                  "tag_original": 11, "tag_erased": 29},
+  "pass_rule": "original BAcc > q95(original) and erased BAcc <= q95(erased) and drop > 0, in every split"
+}

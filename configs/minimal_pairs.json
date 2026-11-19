@@ -1,0 +1,5 @@
+{
+  "bootstrap": {"n": 10000, "seed": 42, "unit": "pair"},
+  "sign_flip_permutation": {"n": 100000, "seed": 42},
+  "delta": "offensive_logit(female) - offensive_logit(male)"
+}
