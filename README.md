@@ -8,7 +8,7 @@ Se-eon Kim, Minkyoung Kim · Kyung Hee University · Undergraduate Paper Track
 
 This study asks what must be checked before a representation intervention can be used to test whether information decoded from a model's internal representations is actually used by the model.
 
-In two Korean BERT offensive-language classifiers, gender was linearly decodable, but no intervention met target change, non-target preservation and stability together. The study therefore stops at "use cannot yet be decided" rather than "not used"; judged on a single split, LEACE would have passed as a successful erasure.
+In two Korean BERT offensive-language classifiers, gender was linearly decodable, but no intervention was valid: LEACE did not erase gender consistently across splits, and no AlterRep setting flipped gender while preserving non-target information. The study therefore stops at "use cannot yet be decided" rather than "not used"; judged on a single split, LEACE would have passed as a successful erasure.
 
 ![Figure 1. Overview](figures/figure1_overview.png)
 
@@ -41,7 +41,7 @@ Relation to prior work:
 - A study on speech recognition (ASR) models combined layer-wise gender decoding with LEACE, but did not check non-target preservation or the stability of the validity decision across repeated runs [7].
 - An evaluation framework that checks target change and non-target preservation was tested on a single split [3].
 
-This study reports layer-wise gender decoding in two Korean offensive-language classifiers (O1), evaluates whether LEACE and AlterRep each meet three criteria together: target change, non-target preservation and stability across splits (O2), and measures classifier output changes on gender-swapped minimal pairs (O3).
+This study reports layer-wise gender decoding in two Korean offensive-language classifiers (O1), evaluates LEACE erasure by whether its erasure criterion holds in all 5 splits and AlterRep flipping by whether target change and non-target preservation are met together (O2), and measures classifier output changes on gender-swapped minimal pairs (O3).
 
 ## 2. Methods
 
@@ -262,7 +262,7 @@ First-author paper, Korea Software Congress (KSC 2026)
 
 이 연구는 내부 표현에서 읽히는 정보가 모델 판단에 실제로 쓰이는지 표현 개입으로 검사할 때, 개입의 유효성을 무엇으로 확인해야 하는지를 다룬다.
 
-두 한국어 BERT 공격성 분류기에서 성별은 선형으로 판독되었지만, 목표 변화·비목표 보존·반복 안정성을 함께 만족한 개입은 없었다. 그래서 결론은 '쓰지 않는다'가 아니라 '쓰는지 아직 판정할 수 없다'에서 멈추며, 분할 하나만 보았다면 LEACE는 소거에 성공한 것으로 판단되었을 것이다.
+두 한국어 BERT 공격성 분류기에서 성별은 선형으로 판독되었지만 유효한 개입은 없었다. LEACE는 분할에 따라 소거 기준 충족 여부가 달랐고, AlterRep은 성별 전환과 비목표 보존을 함께 충족한 설정이 없었다. 그래서 결론은 '쓰지 않는다'가 아니라 '쓰는지 아직 판정할 수 없다'에서 멈추며, 분할 하나만 보았다면 LEACE는 소거에 성공한 것으로 판단되었을 것이다.
 
 ![그림 1. 전체 실험 개요](figures/figure1_overview.png)
 
@@ -295,7 +295,7 @@ First-author paper, Korea Software Congress (KSC 2026)
 - 음성인식(ASR) 모델에서 성별 정보의 층별 판독과 LEACE를 결합한 연구는 비목표 정보 보존과 판정의 반복 안정성을 함께 검증하지 않았다 [7].
 - 개입의 목표 변화와 비목표 보존을 확인하는 평가법은 단일 분할에서 실험되었다 [3].
 
-본 연구는 두 한국어 공격성 분류기에서 성별 정보의 층별 판독 결과를 제시하고(O1), LEACE와 AlterRep이 목표 변화·비목표 보존·분할 간 안정성 세 기준을 함께 만족하는지 평가하며(O2), 성별어를 바꾼 최소쌍에서 분류기 출력 변화를 측정한다(O3).
+본 연구는 두 한국어 공격성 분류기에서 성별 정보의 층별 판독 결과를 제시하고(O1), LEACE 소거는 5개 분할 모두에서 소거 기준을 충족하는지로, AlterRep 전환은 목표 변화와 비목표 보존을 함께 충족하는지로 유효성을 평가하며(O2), 성별어를 바꾼 최소쌍에서 분류기 출력 변화를 측정한다(O3).
 
 ### 2. 실험 방법
 
