@@ -2,7 +2,7 @@
 
 First-author paper, Korea Software Congress (KSC 2026)
 
-Seeon Kim, Minkyoung Kim · Kyung Hee University · Undergraduate Paper Track
+Se-eon Kim, Minkyoung Kim · Kyung Hee University · Undergraduate Paper Track
 
 **English** | [한국어](#한국어)
 
@@ -240,7 +240,7 @@ figures/                    Figures 1-4
 @inproceedings{kim2026gender,
   title     = {한국어 BERT 공격성 분류기의 내부 표현에서 성별 정보 판독과 개입 유효성 평가
                (Gender Information in the Internal Representations of Korean BERT Offensive Language Classifiers: Decodability and Intervention Validity)},
-  author    = {Kim, Seeon and Kim, Minkyoung},
+  author    = {Kim, Se-eon and Kim, Minkyoung},
   booktitle = {Proceedings of the Korea Software Congress (KSC 2026)},
   year      = {2026}
 }
